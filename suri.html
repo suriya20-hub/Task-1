@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Navigation Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .nav-item {
+      padding: 15px 20px;
+      text-decoration: none;
+      color: #000;
+      transition: all 0.3s ease;
+    }
+
+    .nav-item:hover {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar" id="navbar">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">About</a>
+    <a href="#" class="nav-item">Services</a>
+    <a href="#" class="nav-item">Contact</a>
+  </div>
+
+  <div class="content">
+    <!-- Your website content here -->
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.style.backgroundColor = '#fff'; // Change background color on scroll
+      } else {
+        navbar.style.backgroundColor = 'transparent';
+      }
+    });
+  </script>
+</body>
+</html>
